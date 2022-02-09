@@ -1,9 +1,9 @@
 ﻿
 
-var me = new ShoppingWhatBuilder() 
-.When("Today")
-.What("Game") // will not compile
-.Build();
+//var me = new ShoppingWhatBuilder() 
+//.When("Today")
+//.What("Game") // will not compile
+//.Build();
 
 public class Shopping
 {

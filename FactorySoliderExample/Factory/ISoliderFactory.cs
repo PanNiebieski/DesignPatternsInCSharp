@@ -1,0 +1,4 @@
+﻿interface ISoliderFactory
+{
+    ISolider CreateSolider();
+}
