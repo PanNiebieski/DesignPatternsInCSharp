@@ -6,7 +6,6 @@ new Address("Lemonowa 12", 365));
 
 var copy = annaHouse.DeepCopy<House>();
 
-
 var anonim = new { test = "test", test2 = 1 };
 
 var copy2 = anonim.DeepCopy();

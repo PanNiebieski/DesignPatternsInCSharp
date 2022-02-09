@@ -2,7 +2,6 @@
 "Anna House",
 new Address("Lemonowa 12", 365));
 
-
 var annaHouseClone = annaHouse.Clone() as House;
 
 bool check = annaHouseClone.Name == "Anna House";
