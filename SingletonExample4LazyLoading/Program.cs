@@ -1,4 +1,6 @@
-﻿public class CachedData
+﻿
+Console.WriteLine();
+public class CachedData
 {
     private CachedData()
     {

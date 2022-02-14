@@ -1,4 +1,7 @@
-﻿public class OperationStatusFactory
+﻿Console.WriteLine();
+
+
+public class OperationStatusFactory
 {
     private static OperationStatus main =
     new OperationStatus(null, new Info("TEST", ".NET", 0));

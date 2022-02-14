@@ -1,4 +1,4 @@
-﻿
+﻿Console.WriteLine();
 public static class Globals
 {
     public static DatabaseInMemory

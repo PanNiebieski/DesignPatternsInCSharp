@@ -1,5 +1,7 @@
 ﻿using System;
 
+Console.WriteLine();
+
 public class DatabaseInMemory
 {
     private static int instanceCount = 0;

@@ -1,4 +1,5 @@
 ﻿
+Console.WriteLine();
 
 //var me = new ShoppingWhatBuilder() 
 //.When("Today")

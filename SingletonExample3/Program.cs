@@ -1,4 +1,7 @@
-﻿public class DatabaseInMemory
+﻿
+Console.WriteLine();
+
+public class DatabaseInMemory
 {
     private DatabaseInMemory() {  }
 
