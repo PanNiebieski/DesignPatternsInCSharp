@@ -3,7 +3,30 @@ namespace UnitTestSpeaker;
 
 public class SpeakerBuilder
 {
+    public static SpeakerBuilder GivenSpeaker() => 
+        new SpeakerBuilder();
+    public SpeakerBuilder WithContact(string Phone, 
+        string email)
+    {
+        this.contact = new Contact(Phone, email);
+        return this;
+    }
+    public SpeakerBuilder WithNullContact()
+    {
+        this.contact = null;
+        return this;
+    }
+
+    public SpeakerBuilder WithNullName()
+    {
+        this.name = null;
+        return this;
+    }
+
+    private Contact contact = new Contact(
+        "655-555-555", "C@gmail.com");
     private Name name = new Name("Jan", "B");
+
     private Address address =
         new Address("PL", "00-002", "Warsaw", "Lemonowa 12");
     private DateTime birthDate = AppTime.Now().AddYears(-25);
@@ -11,11 +34,8 @@ public class SpeakerBuilder
     private SpeakerWebsites speakerWebsites =
         SpeakerWebsitesBuilder.GivenSpeakerWebsites().Build();
 
-    private Contact contact = new Contact("655-555-555", "C@gmail.com");
 
     private string Bio = "asasa";
-
-    public static SpeakerBuilder GivenSpeaker() => new SpeakerBuilder();
 
     public SpeakerBuilder WithAge(int age)
     {
@@ -35,25 +55,8 @@ public class SpeakerBuilder
         return this;
     }
 
-    public SpeakerBuilder WithContact(string Phone, string email)
-    {
-        this.contact = new Contact(Phone, email);
-        return this;
-    }
-
-    public SpeakerBuilder WithNullContact()
-    {
-        this.contact = null;
-        return this;
-    }
-
-    public SpeakerBuilder WithNullName()
-    {
-        this.name = null;
-        return this;
-    }
-
-    public SpeakerBuilder WithAddress(string country, string zip, string city, string street)
+    public SpeakerBuilder WithAddress(string country, string zip, 
+        string city, string street)
     {
         this.address = new Address(country, zip, city, street);
         return this;

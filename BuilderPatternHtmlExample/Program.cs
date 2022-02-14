@@ -3,7 +3,7 @@ builder.AddChild("li", "Twitter");
 builder.AddChild("li", "Discord");
 Console.WriteLine(builder.ToString());
 
-class HtmlBuilder
+public class HtmlBuilder
 {
     protected HtmlElement root;
 
@@ -12,7 +12,8 @@ class HtmlBuilder
         root = new HtmlElement(rootName);
     }
 
-    public HtmlBuilder AddChild(string childName, string childText)
+    public HtmlBuilder AddChild(string childName,
+        string childText)
     {
         var e = new HtmlElement(childName, childText);
         root.Elements.Add(e);
@@ -21,3 +22,4 @@ class HtmlBuilder
 
     public override string ToString() => root.ToString();
 }
+

@@ -15,7 +15,8 @@ namespace UnitTestSpeaker
             (
                 null,
                 new DateTime(1974, 6, 26),
-                new Address("Poland", "00-001", "Warsaw", "Lemonowa 81"),
+                new Address("Poland", "00-001",
+                "Warsaw", "Lemonowa 81"),
                 new SpeakerWebsites(),
                 ""
                 , new Contact("555-555-555", "c@gmail.com")

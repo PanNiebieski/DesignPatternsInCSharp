@@ -19,7 +19,8 @@ namespace UnitTestSpeaker
             act
                 .Should()
                 .Throw<ArgumentException>()
-                .WithMessage("Name cannot be null");
+                .WithMessage("Name cannot" +
+                " be null");
         }
 
         [Fact]
@@ -30,7 +31,8 @@ namespace UnitTestSpeaker
             act
                 .Should()
                 .Throw<ArgumentException>()
-                .WithMessage("Address cannot be null");
+                .WithMessage("Address " +
+                "cannot be null");
         }
 
         [Fact]
@@ -41,7 +43,8 @@ namespace UnitTestSpeaker
             act
                 .Should()
                 .Throw<ArgumentException>()
-                .WithMessage("Birthdate cannot be empty");
+                .WithMessage(
+                "Birthdate cannot be empty");
         }
 
         [Fact]
@@ -52,7 +55,8 @@ namespace UnitTestSpeaker
             act
                 .Should()
                 .Throw<ArgumentException>()
-                .WithMessage("SpeakerWebsites cannot be empty");
+                .WithMessage(
+                "SpeakerWebsites cannot be empty");
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System.Runtime.Serialization.Formatters.Binary;
+using System.Xml.Serialization;
 
 var annaHouse = new House(
 "Anna House",
@@ -21,6 +22,17 @@ public static class Tools
             stream.Seek(0, SeekOrigin.Begin);
             object copy = formatter.Deserialize(stream);
             return (T)copy;
+        }
+    }
+
+    public static T DeepCopy2<T>(this T self)
+    {
+        using (var stream = new MemoryStream())
+        {
+            XmlSerializer s = new XmlSerializer(typeof(T));
+            s.Serialize(stream, self);
+            stream.Position = 0;
+            return (T)s.Deserialize(stream);
         }
     }
 } 

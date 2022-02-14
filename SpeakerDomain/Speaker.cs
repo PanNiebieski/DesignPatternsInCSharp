@@ -4,7 +4,6 @@
     public Name Name { get; init; }
     public Address Address { get; init; }
     public SpeakerWebsites SpeakerWebsites { get; init; }
-
     public string Biography { get; init; }
     public Contact Contact { get; init; }
 
@@ -33,3 +32,4 @@
         Contact = contact;
     }
 }
+

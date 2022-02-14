@@ -23,6 +23,7 @@
         GitHub = gitHub;
         Blog = blog;
     }
+}
 
     public SpeakerWebsites()
     {
